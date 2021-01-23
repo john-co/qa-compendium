@@ -29,7 +29,7 @@ sudo docker rmi <image_id>       # Removes an image
                             # Will fail if there is a running instance of that image i.e. container
 ```
 * Place the following files in same folder:
-    * build-73x.sh
+    * [build-73x.sh](build-73x.sh)
     * [websphere9docker.tar](https://drive.google.com/file/d/1-eWlIqUXHlv4y15igLsYyqu6rWEvwqYe/view?usp=sharing)
 
 build-73x.sh contents:
