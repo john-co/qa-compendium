@@ -10,7 +10,7 @@
 
 ## Prerequisites
  * docker
- * build-73x.sh
+ * build-portal-ee.sh
  * websphere9docker.tar
 
 ## Setup
@@ -29,7 +29,7 @@ sudo docker rmi <image_id>       # Removes an image
                             # Will fail if there is a running instance of that image i.e. container
 ```
 * Place the following files in same folder:
-    * [build-73x.sh](build-73x.sh)
+    * [build-portal-ee.sh](build-portal-ee.sh)
     * [websphere9docker.tar](https://drive.google.com/file/d/1-eWlIqUXHlv4y15igLsYyqu6rWEvwqYe/view?usp=sharing)
 
 
@@ -44,10 +44,14 @@ sudo docker run -it -p 8080:8080 -p 9060:9060 --name=websphere9 websphere9 bash
 ```
 * Login to your container
 	* `sudo docker exec -it websphere9 bash`
-* Copy build-73x.sh
-    * `sudo docker cp build-73x.sh websphere9:/.`
+* Modify build-portal-ee.sh with your github user variables for liferay-portal-ee
+	* GITHUB_OAUTH_TOKEN
+	* user
+	* branch
+* Copy build-portal-ee.sh
+    * `sudo docker cp build-portal-ee.sh websphere9:/.`
 * In docker websphere terminal:
-    * `sh build-73x.sh`
+    * `sh build-portal-ee.sh`
 * Start Server
 	* `/source/bundles/websphere-9.0.0.0/profiles/liferay/bin/startServer.sh server1`
 * Open another terminal and monitor the systemout.log
