@@ -10,8 +10,8 @@
 
 ## Prerequisites
  * docker
- * build-portal-ee.sh
- * websphere9docker.tar
+ * [build-portal-ee.sh](build-portal-ee.sh)
+ * [websphere9docker.tar](https://drive.google.com/file/d/1-eWlIqUXHlv4y15igLsYyqu6rWEvwqYe/view?usp=sharing)
 
 ## Setup
 
